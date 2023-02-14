@@ -2,8 +2,8 @@ from konstrukt import mainContrusct as getDatabase
 
 
 def webpage_databuilder(database, file_start, file_mainsample, file_end):
-    with open("filmek/new_page.html", "w", encoding="UTF-8"):
-        with open("filmek/new_page.html", "a", encoding="UTF-8") as new_page, open(file_start, encoding="UTF-8") as start, open(file_mainsample, encoding="UTF-8") as sample, open(file_end, encoding="UTF-8") as file_end:
+    with open("./new_page.html", "w", encoding="UTF-8"):
+        with open("./new_page.html", "a", encoding="UTF-8") as new_page, open(file_start, encoding="UTF-8") as start, open(file_mainsample, encoding="UTF-8") as sample, open(file_end, encoding="UTF-8") as file_end:
             temp = start.read()
             new_page.write(temp) # eleje
 
@@ -32,9 +32,9 @@ def webpage_databuilder(database, file_start, file_mainsample, file_end):
 
 def main():
     database = getDatabase()
-    file_start = "filmek/_start.txt"
-    file_mainsample = "filmek/_mainsample.txt"
-    file_end = "filmek/_end.txt"
+    file_start = "./_start.txt"
+    file_mainsample = "./_mainsample.txt"
+    file_end = "./_end.txt"
     webpage_databuilder(database, file_start, file_mainsample, file_end)
 
 main()

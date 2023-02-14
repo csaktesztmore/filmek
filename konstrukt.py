@@ -40,7 +40,7 @@ def construct(file, database):
 
 
 def mainContrusct():
-    file = "filmek/filmek.csv"
+    file = "./filmek.csv"
     database = []
     construct(file, database)
     return database
