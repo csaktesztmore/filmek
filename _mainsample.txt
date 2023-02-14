@@ -1,0 +1,11 @@
+<div class="filmkeret">
+            <img class="kepek" src=" kep_helye " alt="Film-cover">
+            
+            <p class="director"><a href = "href1szerzo"> szerzo_helye </a></p>
+            <p class="title"><a href = "href1cim"> cim_helye </a></p>
+            <p class="year"> ev_helye </p>
+            <p class="actors"> szineszek_helye </p>
+            <p class="genres"> mufajok_helye </p>
+            <div class="leiras "></div>
+           <p class="description"> leiras_helye </p>
+        </div>
