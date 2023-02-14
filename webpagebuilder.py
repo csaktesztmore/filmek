@@ -6,10 +6,16 @@ def webpage_databuilder(database, file_start, file_mainsample, file_end):
         with open("./new_page.html", "a", encoding="UTF-8") as new_page, open(file_start, encoding="UTF-8") as start, open(file_mainsample, encoding="UTF-8") as sample, open(file_end, encoding="UTF-8") as file_end:
             temp = start.read()
             new_page.write(temp) # eleje
-
+            genres = []
             temp = sample.read()
-            for data in database:
-                
+            for genre in database:
+                for item in genre.genre:
+                    if item not in genres:
+                        genres.append(item)
+            for item in genres:
+                print(item)
+            userinput = input("Szeretne szűrni műfajra? Enter ha nem, különben írja be a műfajt:\n")
+            def builder(data):
                 s = temp
                 s = s.replace("kep_helye", data.image)
                 s = s.replace("szerzo_helye", data.director)
@@ -21,6 +27,12 @@ def webpage_databuilder(database, file_start, file_mainsample, file_end):
                 s = s.replace("href1szerzo", data.director_url)
                 s = s.replace("href1cim", data.title_url)
                 new_page.write(s) # közepe
+            for data in database:
+                if userinput == "":
+                    builder(data)
+                elif userinput in data.genre:
+                    builder(data)
+                
             
             temp = file_end.read()
             new_page.write(temp) # vége

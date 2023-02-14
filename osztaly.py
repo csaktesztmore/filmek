@@ -22,4 +22,6 @@ class Film:
         self.star4 = star4
         self.votes = votes
         self.gross = gross
+    def __str__(self) -> str:
+        return f"{self.genre}"
         
