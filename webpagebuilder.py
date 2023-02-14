@@ -9,7 +9,7 @@ def webpage_databuilder(database, file_start, file_mainsample, file_end):
 
             temp = sample.read()
             for data in database:
-                print(data.director)
+                
                 s = temp
                 s = s.replace("kep_helye", data.image)
                 s = s.replace("szerzo_helye", data.director)
